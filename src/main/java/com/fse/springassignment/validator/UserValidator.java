@@ -1,6 +1,7 @@
 package com.fse.springassignment.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
@@ -8,6 +9,7 @@ import org.springframework.validation.Validator;
 import com.fse.springassignment.model.User;
 import com.fse.springassignment.service.UserService;
 
+@Component
 public class UserValidator implements Validator {
 	
 	@Autowired
