@@ -1,12 +1,12 @@
-package com.fse.springassignment.auth.validator;
+package com.fse.springassignment.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.fse.springassignment.auth.service.UserService;
 import com.fse.springassignment.model.User;
+import com.fse.springassignment.service.UserService;
 
 public class UserValidator implements Validator {
 	

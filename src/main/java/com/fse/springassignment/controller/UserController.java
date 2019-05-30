@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.fse.springassignment.auth.service.SecurityService;
-import com.fse.springassignment.auth.service.UserService;
-import com.fse.springassignment.auth.validator.UserValidator;
 import com.fse.springassignment.model.User;
+import com.fse.springassignment.service.SecurityService;
+import com.fse.springassignment.service.UserService;
+import com.fse.springassignment.validator.UserValidator;
 
 public class UserController { 
 	

@@ -1,4 +1,4 @@
-package com.fse.springassignment.auth.service;
+package com.fse.springassignment.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

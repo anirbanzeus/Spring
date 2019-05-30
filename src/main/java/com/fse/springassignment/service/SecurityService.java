@@ -1,4 +1,4 @@
-package com.fse.springassignment.auth.service;
+package com.fse.springassignment.service;
 
 public interface SecurityService {
 	

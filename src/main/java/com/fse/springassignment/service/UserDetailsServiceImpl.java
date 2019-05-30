@@ -1,4 +1,4 @@
-package com.fse.springassignment.auth.service;
+package com.fse.springassignment.service;
 
 import java.util.HashSet;
 import java.util.Set;
