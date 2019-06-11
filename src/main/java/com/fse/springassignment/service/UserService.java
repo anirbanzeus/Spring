@@ -7,5 +7,7 @@ public interface UserService {
 	void saveUser(User user);
 	
 	User findUserByName(String name);
+	
+	User findUserByEmail(String email);
 
 }

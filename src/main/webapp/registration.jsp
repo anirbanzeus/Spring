@@ -19,10 +19,23 @@
 
         <form:form method="POST" modelAttribute="userForm" class="form-signin">
             <h2 class="form-signin-heading">Create your account</h2>
+            <spring:bind path="name">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input type="text" path="username" class="form-control" placeholder="Name"
+                                autofocus="true"></form:input>
+                    <form:errors path="name"></form:errors>
+                </div>
+            </spring:bind>
+            <spring:bind path="email">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input type="text" path="username" class="form-control" placeholder="Email"></form:input>
+                    <form:errors path="email"></form:errors>
+                </div>
+            </spring:bind>
+            
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="username" class="form-control" placeholder="Username"
-                                autofocus="true"></form:input>
+                    <form:input type="text" path="username" class="form-control" placeholder="Username"autofocus="true"></form:input>
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>
