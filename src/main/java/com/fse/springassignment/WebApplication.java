@@ -1,4 +1,4 @@
-package com.fse.springassignment.configuration;
+package com.fse.springassignment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +11,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.fse.springassignment.repository.UserRepository;
 
 @SpringBootApplication
-@ComponentScan(basePackages="com.fse.springassignment")
+//@ComponentScan(basePackages="com.fse.springassignment")
 @EnableJpaRepositories(basePackageClasses= {UserRepository.class})
-@EntityScan("com.fse.springassignment.model")
+//@EntityScan("com.fse.springassignment.model")
 public class WebApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

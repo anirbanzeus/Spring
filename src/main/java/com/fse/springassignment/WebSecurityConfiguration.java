@@ -1,4 +1,4 @@
-package com.fse.springassignment.configuration;
+package com.fse.springassignment;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

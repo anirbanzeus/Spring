@@ -44,18 +44,19 @@ public class UserValidator implements Validator {
 		if(user.getUsername().length()<6 || user.getUsername().length()>32) {
 			errors.reject("username","Size.userForm.username");
 		}
-		if(userService.findUserByName(user.getUsername()) != null) {
+		if(userService.findByUsername(user.getUsername()) != null) {
 			errors.reject("username", "Duplicate.userForm.username");
 		}
 		
 		//validate password
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
-		if(user.getPassword().length()<6 || user.getPassword().length()>32) {
-			errors.reject("password","Size.userForm.password");
-		}
-		if(!user.getPassword().equalsIgnoreCase(user.getPasswordConfirm())) {
-			errors.reject("password", "Diff.userForm.passwordConfirm");
-		}
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
+        if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
+            errors.rejectValue("password", "Size.userForm.password");
+        }
+
+        if (!user.getPasswordConfirm().equals(user.getPassword())) {
+            errors.rejectValue("passwordConfirm", "Diff.userForm.passwordConfirm");
+        }
 	}
 	
 	static boolean isValidEmail(String email) {
