@@ -27,7 +27,7 @@ public class UserValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		User user = (User)target;
 		
-		//Validate name
+		/*//Validate name
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "NotEmpty");
 		if(!isValidName(user.getName())) {
 			errors.reject("name","Type.userForm.name");
@@ -37,7 +37,7 @@ public class UserValidator implements Validator {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty");
 		if(!isValidEmail(user.getEmail())) {
 			errors.reject("email","Size.userForm.email.invalid");
-		}
+		}*/
 		
 		//Validate username
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
